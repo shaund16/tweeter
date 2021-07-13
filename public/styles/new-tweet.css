@@ -1,0 +1,39 @@
+section {
+  margin-top: 1em;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomForm {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7em;
+  font-family: 'Bungee', sans-serif;
+}
+
+textarea {
+  background-color: #f4f1ec;
+  margin-top: 0.2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  resize: none; 
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 5px;
+  
+}
+
+.tweetButton {
+  background-color: #4056A1;
+  color: #fff;
+}
+
+.colorCounter {
+  color: red;
+}
+

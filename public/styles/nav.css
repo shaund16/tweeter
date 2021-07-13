@@ -1,0 +1,26 @@
+nav {
+  background-color: #4056A1;
+  color: #FFFF;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  z-index: -1;
+  width: 100%;
+  align-items: center;
+}
+
+nav span {
+  margin: 1.5em;
+}
+
+.leftSide {
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.5em;
+}
+
+.icon {
+ margin-left: 5em;
+ color: red;
+}
+
+
