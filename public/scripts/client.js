@@ -6,29 +6,27 @@
 const tweetData = [
   {
     user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
+      name: 'Newton',
+      avatars: 'https://i.imgur.com/73hZDYK.png',
+      handle: '@SirIsaac',
     },
     content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
+      text: 'If I have seen further it is by standing on the shoulders of giants',
     },
     created_at: 1625927750576,
   },
   {
     user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd",
+      name: 'Descartes',
+      avatars: 'https://i.imgur.com/nlhLi3I.png',
+      handle: '@rd',
     },
     content: {
-      text: "Je pense , donc je suis",
+      text: 'Je pense , donc je suis',
     },
     created_at: 1626014150576,
   },
 ];
-
-
 
 const createTweetElement = (tweet) => {
   const $tweet = $(`<article class="previousTweetsArticle">
@@ -37,10 +35,10 @@ const createTweetElement = (tweet) => {
   <img src="${tweet.user.avatars}"/>
   <span class="nameTweetHeader">${tweet.user.name}</span>
   </div>
-  <span class="emailTweetHeader">@shaund</span>
+  <span class="emailTweetHeader">${tweet.user.handle}</span>
   </header>
   <div class="middlePreviousTweets">
-  <label class="previousTweet">What are you humming about?</label>
+  <label class="previousTweet">${tweet.content.text}</label>
   <span class="middleTweetBorder"></span>
   </div>
   <footer class="footerPreviousTweets">
@@ -52,7 +50,7 @@ const createTweetElement = (tweet) => {
   </div>
   </footer>
 </article>`);
-  $("#TweetSection").append($tweet);
+  $('#TweetSection').append($tweet);
 };
 
 const renderTweets = function(tweet) {
@@ -60,7 +58,6 @@ const renderTweets = function(tweet) {
     createTweetElement(tweet);
   }
 };
-
 
 $(document).ready(function() {
   renderTweets(tweetData);
