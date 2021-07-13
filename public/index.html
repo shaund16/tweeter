@@ -26,6 +26,10 @@
 
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- Previous Tweets CSS -->
+    <link rel="stylesheet" href="/styles/previousTweets.css" type="text/css">
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -64,21 +68,26 @@
           </div>
         </form>
       </section>
-      <section class="previousTweets">
+      <section class="previousTweetsSection">
         <article>
-          <header class="headerPreviouTweets">
-            <span class="nameTweetHeader">Shaun</span>
+          <header class="headerPreviousTweets">
+            <div class="headerPreviousIcon">
+              <i class="fas fa-user"></i>
+              <span class="nameTweetHeader">Shaun</span>
+            </div>
             <span class="emailTweetHeader">@shaund</span>
           </header>
           <div class="middlePreviousTweets">
             <label class="previousTweet">What are you humming about?</label>
-            <textarea name="text" class="middleTweetBorder"></textarea>
+            <span class="middleTweetBorder"></span>
           </div>
           <footer class="footerPreviousTweets">
-            <span>10 Days Ago</span>
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
+            <span class="previousTweetDays">10 Days Ago</span>
+            <div class="previousFooterIcons">
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </div>
           </footer>
         </article>
       </section>
