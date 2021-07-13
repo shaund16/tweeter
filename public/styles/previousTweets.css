@@ -1,10 +1,10 @@
-.previousTweetsSection {
+.previousTweetsArticle {
   border: 5px solid #545149;
   margin-top: 3em;
   padding: 1em;
 }
 
-.previousTweetsSection:hover {
+.previousTweetsArticle:hover {
   box-shadow: 10px 5px 5px #4056A1;
   transition: box-shadow 0.3s ease-in-out;
 }
