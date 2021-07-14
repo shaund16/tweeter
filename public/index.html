@@ -34,6 +34,9 @@
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
+    <!-- Error Message CSS -->
+    <link rel="stylesheet" href="/styles/error-messages.css" type="text/css" />
+
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
@@ -61,23 +64,31 @@
         <div><i class="fas fa-angle-double-down icon"></i></div>
       </div>
     </nav>
-
+    <!-- Header -->
     <header class="mainHeader">
       <div class="avatar">
         <img src="/images/profile-hex.png" />
       </div>
       <div class="name">
-        <h2>Shaun Purslow</h2>
+        <h2>Eliana Lynn</h2>
       </div>
     </header>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!-- Error Messages -->
+      <section class="errorSection">
+        <!-- Error Message Input -->
+        <div class="errorMessage">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span class="errorMsg">Error! Please post your tweet under 140 characters</span>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+      </section>
+      <!-- New Tweets -->
       <section class="new-tweet">
         <form id="tweetForm" method="POST" action="/tweets">
           <label class="question" for="tweet-text"
-            >What are you humming about?</label
-          >
+            >What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="bottomForm">
             <button class="tweetButton" type="submit">Tweet</button>
@@ -85,9 +96,8 @@
           </div>
         </form>
       </section>
-      <section id="TweetSection">
-     
-      </section>
+      <!-- Tweet Section -->
+      <section id="TweetSection"></section>
     </main>
     
     <!-- App JS -->
