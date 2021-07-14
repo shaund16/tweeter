@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 // template for tweets
 const createTweetElement = (tweet) => {
   const $tweet = $(`<article class="previousTweetsArticle">
@@ -30,6 +24,8 @@ const createTweetElement = (tweet) => {
   $('#TweetSection').prepend($tweet);
 };
 
+
+
 const renderTweets = function(tweetData) {
   $('#TweetSection').val('');
   for (const tweet of tweetData) {
@@ -48,12 +44,15 @@ $(document).ready(function() {
     event.preventDefault();
     //form Validation testing that data is not empty
     if ($('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
-      alert('Tweet Empty. Please Try Again!');
+      $('.errorSection').slideDown(900).css('display', 'block');
+      setTimeout(function() {
+        $('.errorSection').css('display', 'none');
+      },2000);
       return;
     }
     //text in form is greater than 140 characters
     if ($('#tweet-text').val().length > 140) {
-      alert('Reached Max Characters. Please Try Again');
+      $('.errorSection').slideDown(900).css('display', 'block');
       return;
     }
     //Post Tweets with Ajax
@@ -68,6 +67,7 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' }).then(renderTweets);
     $('#tweet-text').val('');
+    $('#counter').text(140);
   };
   loadTweets();
 });
