@@ -1,3 +1,7 @@
+.new-tweet {
+  visibility: hidden;
+}
+
 section {
   margin-top: 1em;
   width: 100%;

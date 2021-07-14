@@ -11,6 +11,11 @@ nav {
   top: 0;
 }
 
+button {
+  background-color: #4056A1;
+  border: none;
+}
+
 nav span {
   margin: 1.5em;
 }
@@ -21,6 +26,5 @@ nav span {
 }
 
 i .icon {
- margin-left: 5em;
  color: red;
 }
