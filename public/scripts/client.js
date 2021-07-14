@@ -3,6 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+// template for tweets
 const createTweetElement = (tweet) => {
   const $tweet = $(`<article class="previousTweetsArticle">
   <header class="headerPreviousTweets">
@@ -49,6 +51,7 @@ $(document).ready(function() {
       alert('Tweet Empty. Please Try Again!');
       return;
     }
+    //text in form is greater than 140 characters
     if ($('#tweet-text').val().length > 140) {
       alert('Reached Max Characters. Please Try Again');
       return;
@@ -68,7 +71,3 @@ $(document).ready(function() {
   };
   loadTweets();
 });
-
-//check data is not empty "" or null
-// the form should not be cleared \
-//the form should not submit
