@@ -74,7 +74,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form method="POST" action="/tweets">
+        <form id="tweetForm" method="POST" action="/tweets">
           <label class="question" for="tweet-text"
             >What are you humming about?</label
           >
@@ -89,12 +89,13 @@
      
       </section>
     </main>
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-
+    
     <!-- Counter Character -->
     <script src="./scripts/composer-char-counter.js"></script>
-
+    
     <!-- Timeago JS -->
     <script src="./scripts/timeago.js"></script>
   </body>
