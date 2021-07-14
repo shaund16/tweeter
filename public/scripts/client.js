@@ -3,31 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const tweetData = [
-  {
-    user: {
-      name: 'Newton',
-      avatars: 'https://i.imgur.com/73hZDYK.png',
-      handle: '@SirIsaac',
-    },
-    content: {
-      text: 'If I have seen further it is by standing on the shoulders of giants',
-    },
-    created_at: 1625927750576,
-  },
-  {
-    user: {
-      name: 'Descartes',
-      avatars: 'https://i.imgur.com/nlhLi3I.png',
-      handle: '@rd',
-    },
-    content: {
-      text: 'Je pense , donc je suis',
-    },
-    created_at: 1626014150576,
-  },
-];
-
 const createTweetElement = (tweet) => {
   const $tweet = $(`<article class="previousTweetsArticle">
   <header class="headerPreviousTweets">
@@ -50,15 +25,50 @@ const createTweetElement = (tweet) => {
   </div>
   </footer>
 </article>`);
-  $('#TweetSection').append($tweet);
+  $('#TweetSection').prepend($tweet);
 };
 
-const renderTweets = function(tweet) {
+const renderTweets = function(tweetData) {
+  $('#TweetSection').val('');
   for (const tweet of tweetData) {
     createTweetElement(tweet);
+  }
+  //timeago conditional statement
+  if (document.querySelectorAll('.need_to_be_rendered').length !== 0) {
+    timeago.format(new Date());
+    timeago.render(document.querySelectorAll('.need_to_be_rendered'));
   }
 };
 
 $(document).ready(function() {
-  renderTweets(tweetData);
+  //create form submission using Jquery
+  $('#tweetForm').submit(function(event) {
+    event.preventDefault();
+    //form Validation testing that data is not empty
+    if ($('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
+      alert('Tweet Empty. Please Try Again!');
+      return;
+    }
+    if ($('#tweet-text').val().length > 140) {
+      alert('Reached Max Characters. Please Try Again');
+      return;
+    }
+    //Post Tweets with Ajax
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: $('#tweetForm').serialize(),
+    }).then(loadTweets);
+  });
+
+  //Fetching Tweets with Ajax
+  const loadTweets = function() {
+    $.ajax('/tweets', { method: 'GET' }).then(renderTweets);
+    $('#tweet-text').val('');
+  };
+  loadTweets();
 });
+
+//check data is not empty "" or null
+// the form should not be cleared \
+//the form should not submit
