@@ -1,0 +1,9 @@
+.errorSection {
+  display: none;
+}
+
+.errorMessage {
+  border: red 5px solid;
+  padding: 1em;
+  color: red;
+}
