@@ -1,0 +1,32 @@
+@import '_base';
+
+nav {
+  background-color: $primary-color;
+  color: #ffff;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  
+  span {
+    margin: 1.5em;
+  }
+
+  .leftSide {
+    font-family: $primary-font;
+    font-size: 1.5em;
+  }
+  
+  i .icon {
+   color: $error-color;
+  }
+
+}
+
+
+
+

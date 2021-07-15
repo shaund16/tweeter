@@ -1,12 +1,14 @@
+@import '_base';
+
 .previousTweetsArticle {
-  border: 5px solid #545149;
+  border: 5px solid $third-color;
   margin-top: 3em;
   padding: 1em;
   margin-bottom: 1em;
 }
 
 .previousTweetsArticle:hover {
-  box-shadow: 10px 5px 5px #4056A1;
+  box-shadow: 10px 5px 5px $primary-color;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -15,13 +17,12 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .nameTweetHeader {
   margin-left: 0.3em;
 }
 
 .emailTweetHeader {
-  color: #4056A1;
+  color: $primary-color;
   opacity: 0.5;
 }
 
@@ -31,8 +32,8 @@
   margin-top: 1.7em;
 }
 
-.previousTweet {
-  font-family: "Source Sans", sans-serif;
+.previousTweet{
+  font-family: $secondary-font;
 }
 
 .middleTweetBorder {
@@ -50,18 +51,16 @@
 }
 
 .previousFooterIcons > .fa-flag, .fa-retweet, .fa-heart {
-  color: #545149;
+  color: $third-color;
   margin-left: 0.4em;
 }
 
 .fa-flag:hover {
-  color: #4056A1;
+  color: $primary-color;
 }
-
 .fa-retweet:hover {
-  color: #4056A1;
+  color: $primary-color;
 }
-
 .fa-heart:hover {
-  color: #4056A1;
+  color: $primary-color;
 }

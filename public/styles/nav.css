@@ -1,6 +1,6 @@
 nav {
   background-color: #4056A1;
-  color: #FFFF;
+  color: #ffff;
   height: 120px;
   display: flex;
   justify-content: space-between;
@@ -10,21 +10,13 @@ nav {
   position: fixed;
   top: 0;
 }
-
-button {
-  background-color: #4056A1;
-  border: none;
-}
-
 nav span {
   margin: 1.5em;
 }
-
-.leftSide {
-  font-family: 'Bungee', sans-serif;
+nav .leftSide {
+  font-family: "Bungee", sans-serif;
   font-size: 1.5em;
 }
-
-i .icon {
- color: red;
+nav i .icon {
+  color: red;
 }

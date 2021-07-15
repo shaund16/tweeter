@@ -1,3 +1,5 @@
+@import '_base';
+
 .new-tweet {
   visibility: hidden;
 }
@@ -16,26 +18,26 @@ form {
   display: flex;
   justify-content: space-between;
   margin-top: 0.7em;
-  font-family: "Bungee", sans-serif;
+  font-family: $primary-font;
 }
 
 textarea {
   background-color: #f4f1ec;
   margin-top: 0.2em;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
-  resize: none;
+  resize: none; 
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: solid 5px #545149;
+  border-bottom: solid 5px $third-color;
 }
 
 .tweetButton {
-  background-color: #4056A1;
-  color: #ffff;
+  background-color: $primary-color;
+  color: $secondary-color;
 }
 
 .colorCounter {
-  color: red;
+  color: $error-color;
 }

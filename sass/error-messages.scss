@@ -1,0 +1,11 @@
+@import '_base';
+
+.errorSection {
+  display: none;
+}
+
+.errorMessage {
+  border: $error-color 5px solid;
+  padding: 1em;
+  color: $error-color;
+}
