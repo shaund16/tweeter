@@ -27,7 +27,7 @@ const createTweetElement = (tweet) => {
 
 
 const renderTweets = function(tweetData) {
-  $('#TweetSection').val('');
+  $('#TweetSection').html('');
   for (const tweet of tweetData) {
     createTweetElement(tweet);
   }
